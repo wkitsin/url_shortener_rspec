@@ -30,7 +30,7 @@ RSpec.describe UrlsController, type: :controller do
       it "should rerender submission page" do
         post :create, invalid_params
         expect(Url.find_by(invalid_params[:url])).to eq nil
-        expect(response).to redirect_to( urls_path )
+        expect(response).to render_template(:new)
       end
 
       it "should render with generated errors" do
