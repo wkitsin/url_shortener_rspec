@@ -44,6 +44,7 @@ RSpec.describe Url, type: :model do
 
 		it "returns short_url when proper long_url is found" do
 			Url.create(long_url: proper_long_url, short_url: proper_short_url)
+			# byebug 
 			expect( Url.retrieve_short_url(proper_long_url) ).to eq proper_short_url
 		end
 	end

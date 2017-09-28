@@ -35,6 +35,7 @@ RSpec.describe UrlsController, type: :controller do
 
       it "should render with generated errors" do
         post :create, invalid_params
+        # byebug 
         expect(assigns(:errors)).not_to eq nil
       end
     end

@@ -1,0 +1,18 @@
+<h3>This is urls/new</h3>
+<% if @errors %> 
+	<%= @errors %>
+<% end %>
+
+<% if @url != nil %>
+	<%= form_for @url do |f| %>
+	  <p>
+	    <%= f.label "Type your URL here:" %><br>
+	    <%= f.text_field :long_url , class: "shorten"%>
+	  </p>
+
+	  <p>
+	    <%= f.submit "Shorten URL!" %>
+	  </p>
+	<% end %>
+	<%= link_to 'Back', urls_path %>
+<% end %>
