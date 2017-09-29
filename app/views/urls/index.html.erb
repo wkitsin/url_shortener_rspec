@@ -7,7 +7,7 @@
 <% if @url != nil %>
 <%  @url.each do |url| %>
     <tr>
-    <td> <%= link_to url.long_url, urls_path(url.id) %></td>
+    <td> <%= link_to url.long_url, url_path(url.id) %></td>
     <td> <%= link_to url.short_url, controller: :urls, action: :short, id: url %> </td>
     </tr>   
 <% end %>

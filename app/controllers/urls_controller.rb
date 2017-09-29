@@ -28,4 +28,8 @@ class UrlsController < ActionController::Base
 		long = finding.long_url
 		redirect_to long 
 	end 
+
+	def show 
+		@object = Url.find(params[:id])
+	end 
 end 

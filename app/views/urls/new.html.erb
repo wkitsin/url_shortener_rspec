@@ -4,10 +4,10 @@
 <% end %>
 
 <% if @url != nil %>
-	<%= form_for @url do |f| %>
+	<%= form_for @url, html: {class: 'form'} do |f| %>
 	  <p>
 	    <%= f.label "Type your URL here:" %><br>
-	    <%= f.text_field :long_url , class: "shorten"%>
+	    <%= f.text_field :long_url , id: "shorten"%>
 	  </p>
 
 	  <p>
